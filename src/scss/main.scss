@@ -68,6 +68,8 @@ input {
 .main {
 	ul {
 		margin: 2em 0;
+		display: flex;
+		flex-direction: column-reverse;
 	}
 
 	li {
@@ -79,7 +81,7 @@ input {
 		border-radius: 0.4em;
 
 		& + li {
-			margin-top: 0.2em;
+			margin-bottom: 0.2em;
 		}
 
 		i {
@@ -88,7 +90,7 @@ input {
 
 			&:hover,
 			&:focus {
-				color: #142850;
+				color: #e13834;
 			}
 		}
 	}

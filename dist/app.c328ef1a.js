@@ -118,7 +118,33 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"app.js":[function(require,module,exports) {
-console.log('hello');
+var addForm = document.querySelector('.addForm');
+var add = document.querySelector('.add');
+var list = document.querySelector('.main ul'); // function for adding new todo
+
+var addTodo = function addTodo(todo) {
+  var html = "\n\t\t\t<li>\n\t\t\t\t<span>".concat(todo, "</span>\n\t\t\t\t<i class=\"fas fa-trash delete\"></i>\n\t\t\t</li>\n    ");
+  list.innerHTML += html;
+}; // eventListener for adding new todo
+
+
+addForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+  var todo = add.value.trim();
+
+  if (todo.length) {
+    addTodo(todo);
+    addForm.reset();
+  }
+}); // delete todo
+
+var deleteTodo = function deleteTodo(e) {
+  if (e.target.classList.contains('delete')) {
+    e.target.parentElement.remove();
+  }
+};
+
+list.addEventListener('click', deleteTodo);
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

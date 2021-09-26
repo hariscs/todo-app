@@ -65,6 +65,8 @@ input {
 
 .main ul {
   margin: 2em 0;
+  display: flex;
+  flex-direction: column-reverse;
 }
 .main li {
   display: flex;
@@ -75,14 +77,14 @@ input {
   border-radius: 0.4em;
 }
 .main li + li {
-  margin-top: 0.2em;
+  margin-bottom: 0.2em;
 }
 .main li i {
   cursor: pointer;
   padding: 0.5em;
 }
 .main li i:hover, .main li i:focus {
-  color: #142850;
+  color: #e13834;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */
