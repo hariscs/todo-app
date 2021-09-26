@@ -12,12 +12,67 @@ html {
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
+  background: linear-gradient(#6f26ac, #e7d1ff);
+  color: #fff;
+  min-height: 100vh;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .container {
   width: 90%;
   max-width: 600px;
-  margin: 2em auto;
+  margin: 0.5em auto;
+  padding: 1em 2em;
+}
+
+.header {
+  text-align: center;
+}
+
+form {
+  display: flex;
+}
+
+input {
+  width: 100%;
+  padding: 0.8em;
+  border: 0;
+  background: #6f26ac;
+  color: #fff;
+  border-radius: 0.4em 0 0 0.4em;
+  font-family: inherit;
+}
+
+.btn {
+  border: 0;
+  background: #142850;
+  color: #fff;
+  font-family: inherit;
+  font-weight: 600;
+  padding: 0.5em 1em;
+  width: 90px;
+  cursor: pointer;
+  border-radius: 0 0.4em 0.4em 0;
+}
+.btn:hover, .btn:focus {
+  opacity: 0.9;
+}
+
+.main ul {
+  margin: 2em 0;
+}
+.main li {
+  background: #6f26ac;
+  padding: 0.5em;
+  border-radius: 0.4em;
+}
+.main li + li {
+  margin-top: 0.2em;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */
