@@ -1,0 +1,25 @@
+{
+	"name": "todo-app",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "parcel src/index.html",
+		"build": "parcel build src/index.html"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/hariscs/todo-app.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/hariscs/todo-app/issues"
+	},
+	"homepage": "https://github.com/hariscs/todo-app#readme",
+	"devDependencies": {
+		"parcel-bundler": "^1.12.5",
+		"sass": "^1.42.1"
+	}
+}
