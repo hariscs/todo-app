@@ -23,12 +23,11 @@ addForm.addEventListener('submit', (e) => {
 	const todo = add.value.trim();
 	if (todo.length) {
 		addTodo(todo);
-
 		addForm.reset();
 	}
 });
 
-// searching todo
+// searching todoa
 const filterTodo = (term) => {
 	Array.from(list.children)
 		.filter((todo) => !todo.textContent.toLowerCase().includes(term))
