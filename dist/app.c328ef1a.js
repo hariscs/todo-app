@@ -138,7 +138,7 @@ addForm.addEventListener('submit', function (e) {
     addTodo(todo);
     addForm.reset();
   }
-}); // searching todoa
+}); // searching todo
 
 var filterTodo = function filterTodo(term) {
   Array.from(list.children).filter(function (todo) {

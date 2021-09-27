@@ -27,7 +27,7 @@ addForm.addEventListener('submit', (e) => {
 	}
 });
 
-// searching todoa
+// searching todo
 const filterTodo = (term) => {
 	Array.from(list.children)
 		.filter((todo) => !todo.textContent.toLowerCase().includes(term))
