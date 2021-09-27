@@ -37,6 +37,9 @@ ul {
 form {
   display: flex;
 }
+form .search {
+  border-radius: 0.4em;
+}
 
 input {
   width: 100%;
@@ -85,6 +88,10 @@ input {
 }
 .main li i:hover, .main li i:focus {
   color: #e13834;
+}
+
+.filter {
+  display: none !important;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

@@ -1,6 +1,8 @@
 const addForm = document.querySelector('.addForm');
+const searchForm = document.querySelector('.searchForm');
 const add = document.querySelector('.add');
 const list = document.querySelector('.main ul');
+const search = document.querySelector('.search');
 
 // function for adding new todo
 const addTodo = (todo) => {
@@ -24,6 +26,22 @@ addForm.addEventListener('submit', (e) => {
 
 		addForm.reset();
 	}
+});
+
+// searching todo
+const filterTodo = (term) => {
+	Array.from(list.children)
+		.filter((todo) => !todo.textContent.toLowerCase().includes(term))
+		.forEach((todo) => todo.classList.add('filter'));
+
+	Array.from(list.children)
+		.filter((todo) => todo.textContent.toLowerCase().includes(term))
+		.forEach((todo) => todo.classList.remove('filter'));
+};
+
+searchForm.addEventListener('keyup', () => {
+	const term = search.value.trim().toLowerCase();
+	filterTodo(term);
 });
 
 // delete todo

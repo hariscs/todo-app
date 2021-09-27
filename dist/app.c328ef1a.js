@@ -119,8 +119,10 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"app.js":[function(require,module,exports) {
 var addForm = document.querySelector('.addForm');
+var searchForm = document.querySelector('.searchForm');
 var add = document.querySelector('.add');
-var list = document.querySelector('.main ul'); // function for adding new todo
+var list = document.querySelector('.main ul');
+var search = document.querySelector('.search'); // function for adding new todo
 
 var addTodo = function addTodo(todo) {
   var html = "\n\t\t\t<li>\n\t\t\t\t<span>".concat(todo, "</span>\n\t\t\t\t<i class=\"fas fa-trash delete\"></i>\n\t\t\t</li>\n    ");
@@ -136,6 +138,24 @@ addForm.addEventListener('submit', function (e) {
     addTodo(todo);
     addForm.reset();
   }
+}); // searching todo
+
+var filterTodo = function filterTodo(term) {
+  Array.from(list.children).filter(function (todo) {
+    return !todo.textContent.toLowerCase().includes(term);
+  }).forEach(function (todo) {
+    return todo.classList.add('filter');
+  });
+  Array.from(list.children).filter(function (todo) {
+    return todo.textContent.toLowerCase().includes(term);
+  }).forEach(function (todo) {
+    return todo.classList.remove('filter');
+  });
+};
+
+searchForm.addEventListener('keyup', function () {
+  var term = search.value.trim().toLowerCase();
+  filterTodo(term);
 }); // delete todo
 
 var deleteTodo = function deleteTodo(e) {
@@ -173,7 +193,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54785" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52082" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
